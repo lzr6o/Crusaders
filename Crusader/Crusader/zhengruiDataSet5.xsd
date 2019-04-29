@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="zhengruiDataSet5" targetNamespace="http://tempuri.org/zhengruiDataSet5.xsd" xmlns:mstns="http://tempuri.org/zhengruiDataSet5.xsd" xmlns="http://tempuri.org/zhengruiDataSet5.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="zhengruiConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="zhengruiConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Crusader.Properties.Settings.GlobalReference.Default.zhengruiConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="HeroTableAdapter" GeneratorDataComponentClassName="HeroTableAdapter" Name="Hero" UserDataComponentName="HeroTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="zhengruiConnectionString (Settings)" DbObjectName="zhengrui.Crusader.Hero" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT HeroName, Faction FROM Crusader.Hero</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="HeroName" DataSetColumn="HeroName" />
+              <Mapping SourceColumn="Faction" DataSetColumn="Faction" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NPCTableAdapter" GeneratorDataComponentClassName="NPCTableAdapter" Name="NPC" UserDataComponentName="NPCTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="zhengruiConnectionString (Settings)" DbObjectName="zhengrui.Crusader.NPC" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT NPCName FROM Crusader.NPC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NPCName" DataSetColumn="NPCName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="zhengruiDataSet5" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="zhengruiDataSet5" msprop:Generator_UserDSName="zhengruiDataSet5">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Hero" msprop:Generator_TableClassName="HeroDataTable" msprop:Generator_TableVarName="tableHero" msprop:Generator_TablePropName="Hero" msprop:Generator_RowDeletingName="HeroRowDeleting" msprop:Generator_RowChangingName="HeroRowChanging" msprop:Generator_RowEvHandlerName="HeroRowChangeEventHandler" msprop:Generator_RowDeletedName="HeroRowDeleted" msprop:Generator_UserTableName="Hero" msprop:Generator_RowChangedName="HeroRowChanged" msprop:Generator_RowEvArgName="HeroRowChangeEvent" msprop:Generator_RowClassName="HeroRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HeroName" msprop:Generator_ColumnVarNameInTable="columnHeroName" msprop:Generator_ColumnPropNameInRow="HeroName" msprop:Generator_ColumnPropNameInTable="HeroNameColumn" msprop:Generator_UserColumnName="HeroName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Faction" msprop:Generator_ColumnVarNameInTable="columnFaction" msprop:Generator_ColumnPropNameInRow="Faction" msprop:Generator_ColumnPropNameInTable="FactionColumn" msprop:Generator_UserColumnName="Faction">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NPC" msprop:Generator_TableClassName="NPCDataTable" msprop:Generator_TableVarName="tableNPC" msprop:Generator_TablePropName="NPC" msprop:Generator_RowDeletingName="NPCRowDeleting" msprop:Generator_RowChangingName="NPCRowChanging" msprop:Generator_RowEvHandlerName="NPCRowChangeEventHandler" msprop:Generator_RowDeletedName="NPCRowDeleted" msprop:Generator_UserTableName="NPC" msprop:Generator_RowChangedName="NPCRowChanged" msprop:Generator_RowEvArgName="NPCRowChangeEvent" msprop:Generator_RowClassName="NPCRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NPCName" msprop:Generator_ColumnVarNameInTable="columnNPCName" msprop:Generator_ColumnPropNameInRow="NPCName" msprop:Generator_ColumnPropNameInTable="NPCNameColumn" msprop:Generator_UserColumnName="NPCName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

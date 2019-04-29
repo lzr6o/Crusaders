@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B8C6007-7B6F-4EF6-BC8C-957339854CCD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Crusader</RootNamespace>
+    <AssemblyName>Crusader</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel.Designer.cs">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chapter.cs">
+      <DependentUpon>UserModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChapterSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChapterSearch.Designer.cs">
+      <DependentUpon>ChapterSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Choices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Choices.Designer.cs">
+      <DependentUpon>Choices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hero.cs">
+      <DependentUpon>UserModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HeroSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeroSearch.Designer.cs">
+      <DependentUpon>HeroSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Join.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Join.Designer.cs">
+      <DependentUpon>Join.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NPC.cs">
+      <DependentUpon>UserModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NPCModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NPCModify.Designer.cs">
+      <DependentUpon>NPCModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NPCSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NPCSearch.Designer.cs">
+      <DependentUpon>NPCSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueryAssistant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryAssistant.Designer.cs">
+      <DependentUpon>QueryAssistant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.cs">
+      <DependentUpon>UserModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResourceSearch.Designer.cs">
+      <DependentUpon>ResourceSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchCategory.Designer.cs">
+      <DependentUpon>SearchCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>UserModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="zhengruiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zhengruiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zhengruiDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zhengruiDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zhengruiDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zhengruiDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zhengruiDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zhengruiDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zhengruiDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zhengruiDataSet4.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminPanel.resx">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChapterSearch.resx">
+      <DependentUpon>ChapterSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Choices.resx">
+      <DependentUpon>Choices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeroSearch.resx">
+      <DependentUpon>HeroSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Join.resx">
+      <DependentUpon>Join.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NPCModify.resx">
+      <DependentUpon>NPCModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NPCSearch.resx">
+      <DependentUpon>NPCSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryAssistant.resx">
+      <DependentUpon>QueryAssistant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ResourceSearch.resx">
+      <DependentUpon>ResourceSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchCategory.resx">
+      <DependentUpon>SearchCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="UserModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UserModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="UserModel.edmx.diagram">
+      <DependentUpon>UserModel.edmx</DependentUpon>
+    </None>
+    <None Include="zhengruiDataSet.xsc">
+      <DependentUpon>zhengruiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="zhengruiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zhengruiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zhengruiDataSet.xss">
+      <DependentUpon>zhengruiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="zhengruiDataSet1.xsc">
+      <DependentUpon>zhengruiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="zhengruiDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zhengruiDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zhengruiDataSet1.xss">
+      <DependentUpon>zhengruiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="zhengruiDataSet2.xsc">
+      <DependentUpon>zhengruiDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="zhengruiDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zhengruiDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zhengruiDataSet2.xss">
+      <DependentUpon>zhengruiDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="zhengruiDataSet3.xsc">
+      <DependentUpon>zhengruiDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="zhengruiDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zhengruiDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zhengruiDataSet3.xss">
+      <DependentUpon>zhengruiDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="zhengruiDataSet4.xsc">
+      <DependentUpon>zhengruiDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="zhengruiDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zhengruiDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zhengruiDataSet4.xss">
+      <DependentUpon>zhengruiDataSet4.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UserModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UserModel.Context.cs</LastGenOutput>
+      <DependentUpon>UserModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="UserModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UserModel.edmx</DependentUpon>
+      <LastGenOutput>UserModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
